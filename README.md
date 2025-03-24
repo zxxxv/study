@@ -1,2 +1,1 @@
-# data-structure
-with c
+# study
