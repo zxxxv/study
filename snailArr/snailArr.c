@@ -10,13 +10,13 @@ int main() {
 	{
 		int m = 9 - (2 * i);
 		for (int j = 0; j < m; ++j)
-		{
-			if (i / 2 == 0)
+		{	
+			if (i % 2 == 0)
 			{
-				if (j < m / 2)
+				if (j <= m / 2)
 					arr[i / 2][i / 2 + j] = ++cnt;
 				else
-					arr[j - m / 2][i / 2 + m / 2] = ++cnt;
+					arr[j - m / 2 + i / 2][i / 2 + m / 2] = ++cnt;
 			}
 			else
 			{
@@ -24,7 +24,7 @@ int main() {
 				if (j <= m / 2)
 					arr[n][n - 1 - j] = ++cnt;
 				else
-					arr[n - j + m / 2][n - m / 2] = ++cnt;
+					arr[n - j + m / 2][n - m / 2 - 1] = ++cnt;
 			}
 		}
 	}
